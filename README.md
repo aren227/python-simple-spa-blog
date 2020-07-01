@@ -5,16 +5,16 @@ It just converts markdown files to html files and builds posts.json file which i
 
 Template is required for deploying a fully functional blog.
 
-###Features
+### Features
  - Simple static site builder like Jekyll.
  - Single-page application.
  - Project and tags support.
  - File creation/modification management.
 
-###Requirements
+### Requirements
  - markdown2
 
-###How to use
+### How to use
  1. Write a post in markdown format. It should be located in ```posts``` folder. There are no rules about file names, but you have to write a file header like this:
     ```
     ---
