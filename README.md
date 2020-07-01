@@ -9,7 +9,7 @@ Template is required for deploying a fully functional blog.
  - Simple static site builder like Jekyll.
  - Single-page application.
  - Project and tags support.
- - File creation/modification management.
+ - File creation/modification time management.
 
 ### Requirements
  - markdown2
@@ -24,5 +24,5 @@ Template is required for deploying a fully functional blog.
     ---
     Contents...
     ```
- 2. If you need another resource like image, put it into ```posts``` folder.
+ 2. If you need another resource like image, put it into ```posts``` or its subfolder.
  3. Run ```build.py```
