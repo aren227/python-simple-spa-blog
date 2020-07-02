@@ -15,7 +15,7 @@ Template is required for deploying a fully functional blog.
  - markdown2
 
 ### How to use
- 1. Write a post in markdown format. It should be located in ```posts``` folder. There are no rules about file names, but you have to write a file header like this:
+ 1. Write a post in markdown format. There are no rules about file names, but you have to write a file header like this:
     ```
     ---
     title: Hello, World!
@@ -24,5 +24,5 @@ Template is required for deploying a fully functional blog.
     ---
     Contents...
     ```
- 2. If you need another resource like image, put it into ```posts``` or its subfolder.
- 3. Run ```build.py```
+ 2. If you need another resource like image, put it into same folder or its subfolder.
+ 3. Run ```build.py <POSTS FOLDER PATH> <TEMPLATE FOLDER PATH>```
