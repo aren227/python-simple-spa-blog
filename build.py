@@ -89,7 +89,7 @@ if __name__ == '__main__':
 
         html = markdown2.markdown(post.content)
 
-        html_file = open(os.path.join("__posts", post.id + ".html"), mode='w', encoding='utf-8')
+        html_file = open(os.path.join("posts__", post.id + ".html"), mode='w', encoding='utf-8')
         html_file.write(html)
         html_file.close()
 
