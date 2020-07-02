@@ -40,7 +40,7 @@ if __name__ == '__main__':
 
     print(len(posts), "posts were found")
 
-    Path("__posts").mkdir(exist_ok=True)
+    Path("posts__").mkdir(exist_ok=True)
 
     tags = set()
     for post in posts:
