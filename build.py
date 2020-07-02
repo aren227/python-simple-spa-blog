@@ -77,7 +77,7 @@ if __name__ == '__main__':
 
         thumbnail = post.get_thumbnail()
         if thumbnail is not None:
-            postObj["thumbnail"] = "post__/" + thumbnail
+            postObj["thumbnail"] = thumbnail
 
         jsonObj["posts"].append(postObj)
 
