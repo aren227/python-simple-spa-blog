@@ -14,7 +14,7 @@ if __name__ == '__main__':
     posts = []
 
     for file in os.listdir("posts"):
-        if file.endswith(".md"):
+        if file.endswith(".md") and file != "README.md":
             posts.append(Post(os.path.join("posts", file)))
 
     posts = sorted(posts, key=lambda x: x.creation_time, reverse=True)
