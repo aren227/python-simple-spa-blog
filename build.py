@@ -88,6 +88,10 @@ if __name__ == '__main__':
     json_file.close()
     print("Done!")
 
+    print("Cleaning output folder...", end='')
+    shutil.rmtree("posts__")
+    print("Done!")
+
     for post in posts:
         print("Processing " + post.path + "...", end='')
 
