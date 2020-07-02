@@ -46,6 +46,7 @@ class Post:
             raise RuntimeError("Title was not found in " + path)
 
         self.content = "\n".join(lines[header_end + 1:])
+        self.content = re.sub(r"!\[(.*?)\]\((.*?)\)", r"![\1](posts__/\2)", self.content)  # prefix posts__/ to img path
 
         file.close()
 
