@@ -17,7 +17,7 @@ if __name__ == '__main__':
         if file.endswith(".md"):
             posts.append(Post(os.path.join("posts", file)))
 
-    posts = sorted(posts, key=lambda x: x.creation_time)
+    posts = sorted(posts, key=lambda x: x.creation_time, reverse=True)
 
     print(len(posts), "posts were found")
 
