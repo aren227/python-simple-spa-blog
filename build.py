@@ -95,10 +95,19 @@ if __name__ == '__main__':
 
         print("Done!")
 
+    print("Placing resource files...", end='')
+    for file in os.listdir(POSTS_FOLDER):
+        full_path = os.path.join(POSTS_FOLDER, file)
+        if os.path.isfile(full_path) and not file.endswith(".md") and not file.endswith(".meta"):
+            shutil.copy(full_path, os.path.join("posts__", file))
+        elif os.path.isdir(full_path):
+            shutil.copytree(full_path, os.path.join("posts__", file))
+
     print("Placing template files...", end='')
     for file in os.listdir(TEMPLATE_FOLDER):
-        if os.path.isfile(os.path.join(TEMPLATE_FOLDER, file)) and file != "README.md":
-            shutil.copy(os.path.join(TEMPLATE_FOLDER, file), file)
-        elif os.path.isdir(os.path.join(TEMPLATE_FOLDER, file)):
-            shutil.copytree(os.path.join(TEMPLATE_FOLDER, file), file)
+        full_path = os.path.join(TEMPLATE_FOLDER, file)
+        if os.path.isfile(full_path) and file != "README.md":
+            shutil.copy(full_path, file)
+        elif os.path.isdir(full_path):
+            shutil.copytree(full_path, file)
     print("Done!")
