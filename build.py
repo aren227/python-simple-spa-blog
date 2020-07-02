@@ -77,6 +77,10 @@ if __name__ == '__main__':
         postObj["tags"] = post.tags
         postObj["preview"] = post.get_preview()
 
+        thumbnail = post.get_thumbnail()
+        if thumbnail is not None:
+            postObj["thumbnail"] = thumbnail
+
         jsonObj["posts"].append(postObj)
 
     json_file = open("posts.json", mode='w', encoding='utf-8')

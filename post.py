@@ -2,6 +2,7 @@ import time
 import os
 import hashlib
 import random
+import re
 
 class Post:
 
@@ -94,3 +95,9 @@ class Post:
     def get_preview(self, length=100):
         content = self.content.replace('\n', ' ')
         return content[:length]
+
+    def get_thumbnail(self):
+        result = re.search(r"!\[.*?\]\((.*?)\)", self.content)
+        if result is None:
+            return None
+        return result.group(1)  # First occurrence
