@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
     print(len(posts), "posts were found")
 
-    Path("result/post").mkdir(parents=True, exist_ok=True)
+    Path("result/posts").mkdir(parents=True, exist_ok=True)
 
     tags = set()
     for post in posts:
@@ -70,7 +70,7 @@ if __name__ == '__main__':
 
         html = markdown2.markdown(post.content)
 
-        html_file = open(os.path.join("result/post", post.id + ".html"), mode='w', encoding='utf-8')
+        html_file = open(os.path.join("result/posts", post.id + ".html"), mode='w', encoding='utf-8')
         html_file.write(html)
         html_file.close()
 
