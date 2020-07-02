@@ -40,8 +40,6 @@ if __name__ == '__main__':
 
     print(len(posts), "posts were found")
 
-    Path("posts__").mkdir(exist_ok=True)
-
     tags = set()
     for post in posts:
         for tag in post.tags:
@@ -90,6 +88,7 @@ if __name__ == '__main__':
 
     print("Cleaning output folder...", end='')
     shutil.rmtree("posts__")
+    Path("posts__").mkdir()
     print("Done!")
 
     for post in posts:
