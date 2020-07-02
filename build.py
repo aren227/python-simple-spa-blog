@@ -97,7 +97,7 @@ if __name__ == '__main__':
 
     print("Placing template files...", end='')
     for file in os.listdir(TEMPLATE_FOLDER):
-        if os.path.isfile(os.path.join(TEMPLATE_FOLDER, file)):
+        if os.path.isfile(os.path.join(TEMPLATE_FOLDER, file)) and file != "README.md":
             shutil.copy(os.path.join(TEMPLATE_FOLDER, file), file)
         elif os.path.isdir(os.path.join(TEMPLATE_FOLDER, file)):
             shutil.copytree(os.path.join(TEMPLATE_FOLDER, file), file)
