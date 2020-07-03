@@ -94,7 +94,7 @@ if __name__ == '__main__':
     for post in posts:
         print("Processing " + post.path + "...", end='')
 
-        html = markdown2.markdown(post.content)
+        html = markdown2.markdown(post.content, extras=['fenced-code-blocks'])
 
         html_file = open(os.path.join("posts__", post.id + ".html"), mode='w', encoding='utf-8')
         html_file.write(html)
