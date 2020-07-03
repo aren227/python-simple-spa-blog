@@ -95,7 +95,7 @@ class Post:
 
     def get_preview(self, length=100):
         content = self.content.replace('\n', ' ')
-        return content[:length]
+        return content[:length] + ("..." if len(content) > length else "")
 
     def get_thumbnail(self):
         result = re.search(r"!\[.*?\]\((.*?)\)", self.content)
